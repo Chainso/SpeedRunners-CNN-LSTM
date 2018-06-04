@@ -1,8 +1,26 @@
 # SpeedRunners-CNN-LSTM
 
-CNN-LSTM Network that learns to play SpeedRunners
+CNN-LSTM Network that learns to play SpeedRunners.
 
 &nbsp;
+
+# Dependencies
+
+vJoy
+pyvjoy
+x360ce
+tensorflow
+numpy
+cv2
+pathlib
+win32gui
+win32ui
+win32con
+win32api
+win32process
+ctypes
+pywintypes
+psutil
 
 # Setup
 
