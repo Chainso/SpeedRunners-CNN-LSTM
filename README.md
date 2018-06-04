@@ -32,7 +32,7 @@ The model runs on an April 2016 release of SpeedRunners, when this type of input
 
 # Recording Gameplay
 
-To record your own gameplay, run record_gameplay.py while you are loaded into the map for SpeedRunners. The best training environment is the practice mode. The window will change to your game when the gameplay starts recording. In order to stop recording, you can close the game or tab out of the game.
+Open record_gameplay.py and make sure that the virtual key codes correspond to your gameplay settings. Key codes can be found at https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx. Run record_gameplay.py while you are loaded into the map for SpeedRunners. The best training environment is the practice mode. The window will change to your game when the gameplay starts recording. In order to stop recording, you can close the game or tab out of the game.
 
 &nbsp;
 
