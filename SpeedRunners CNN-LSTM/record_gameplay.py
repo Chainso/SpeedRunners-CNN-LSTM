@@ -2,6 +2,7 @@ import numpy as np
 import win32api as wapi
 import pywintypes
 import os
+from pathlib import Path
 from info_grabber import InfoGrabber
 
 # Going to sort keys by priority (grapple -> jump -> item -> slide -> left -> right)
@@ -104,11 +105,11 @@ DATA_PATH = CURRENT_DIR + "/SpeedRunners Training Data/nightclub_data.npy"
 # Module to get the screenshots
 info = InfoGrabber(PROCESS_NAME)
 
-# Use this if you are appending to old data
-#data = np.load(DATA_PATH)
-
-# The total data
-data = []
+# Append to old data if it exists
+if(Path(DATA_PATH).exists()):
+    data = np.load(DATA_PATH)
+else:
+    data = []
 
 # The data from this session of recording
 new_data = []
