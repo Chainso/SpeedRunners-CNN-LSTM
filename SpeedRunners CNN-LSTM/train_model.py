@@ -1,11 +1,12 @@
 import os
 import numpy as np
+from pathlib import Path
 from cnn_lstm import CNNLSTM
 
 #-----Classes and Constants-----#
 
 # The learning rate
-LR = 0.00005
+LR = 0.0001
 
 # The width of the image
 IMAGE_WIDTH = 128
@@ -31,7 +32,8 @@ PROCESS_NAME = "SpeedRunners.exe"
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 # The path for the data
-DATA_PATH = CURRENT_DIR + "/SpeedRunners Training Data/training_data.npy"
+DATA_PATH = CURRENT_DIR + "/SpeedRunners Training Data/nightclub_data.npy"
+
 
 # The path to save the model
 MODEL_PATH = CURRENT_DIR + "/SpeedRunners Models/model.ckpt"
@@ -45,8 +47,9 @@ model = CNNLSTM(IMAGE_WIDTH, IMAGE_HEIGHT, 1, BATCH_SIZE, MEMORY_FRAMES, LR)
 # Get the data
 data = np.load(DATA_PATH)
 
-# Load the model if it exists
-model.load(MODEL_PATH)
+# Train old model if it exists
+if(Path(MODEL_PATH).exists()):
+    model.load(MODEL_PATH)
 
 # Train the model
 model.train(data, EPOCHS)
