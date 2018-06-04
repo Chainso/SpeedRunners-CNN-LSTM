@@ -39,7 +39,7 @@ DATA_PATH = CURRENT_DIR + "/SpeedRunners Training Data/nightclub_data.npy"
 
 
 # The path to save the model
-MODEL_PATH = CURRENT_DIR + "/SpeedRunners Models/model.ckpt"
+MODEL_PATH = CURRENT_DIR + "/SpeedRunners Models/nightclub_model.ckpt"
 
 
 #-----Train Model-----#
