@@ -24,7 +24,7 @@ PROCESS_NAME = "SpeedRunners.exe"
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 # The path to save the model
-MODEL_PATH = CURRENT_DIR + "/SpeedRunners Models/model.ckpt"
+MODEL_PATH = CURRENT_DIR + "/SpeedRunners Models/nightclub_model.ckpt"
 
 
 #-----Get the classes-----#
