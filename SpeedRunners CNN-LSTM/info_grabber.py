@@ -57,7 +57,7 @@ class InfoGrabber():
         win32gui.SetForegroundWindow(self._hwnd)
 
         # Credits to Frannecklp
-        hwin = win32gui.GetWindow(self.hwnd, win32con.GW_OWNER) 
+        hwin = win32gui.GetWindow(self._hwnd, win32con.GW_OWNER) 
     
         width = win32api.GetSystemMetrics(win32con.SM_CXVIRTUALSCREEN)
         height = win32api.GetSystemMetrics(win32con.SM_CYVIRTUALSCREEN)
