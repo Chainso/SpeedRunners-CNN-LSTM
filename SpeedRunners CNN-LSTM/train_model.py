@@ -48,7 +48,7 @@ model = CNNLSTM(IMAGE_WIDTH, IMAGE_HEIGHT, 1, BATCH_SIZE, MEMORY_FRAMES, LR)
 data = np.load(DATA_PATH)
 
 # Train old model if it exists
-if(Path(MODEL_PATH).exists()):
+if(Path(MODEL_PATH + ".index").exists()):
     model.load(MODEL_PATH)
 
 # Train the model
