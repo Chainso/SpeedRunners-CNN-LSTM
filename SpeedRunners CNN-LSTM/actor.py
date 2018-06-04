@@ -43,7 +43,7 @@ class Actor():
 
     def left_boost(self):
         if(self._last_command != "left_boost"):
-            self.reset()
+            self.reset("left")
             self.reset_buts()
             self._vjoy.set_axis(pyvjoy.HID_USAGE_X, self._min_vjoy)
             self.boost()
@@ -54,7 +54,7 @@ class Actor():
 
     def right(self):
         if(self._last_command != "right"):
-            self.reset()
+            self.reset("right")
             self.reset_buts()
             self._vjoy.set_axis(pyvjoy.HID_USAGE_X, self._max_vjoy)
             self.reset_boost()
@@ -65,7 +65,7 @@ class Actor():
 
     def right_boost(self):
         if(self._last_command != "right_boost"):
-            self.reset()
+            self.reset("right")
             self.reset_buts()
             self._vjoy.set_axis(pyvjoy.HID_USAGE_X, self._max_vjoy)
             self.boost()
@@ -76,7 +76,7 @@ class Actor():
 
     def jump(self):
         if(self._last_command != "jump"):
-            self.reset("right")
+            self.reset()
             self.reset_buts([self._jump])
             self._vjoy.set_button(self._jump, 1)
             self.reset_boost()
@@ -87,7 +87,7 @@ class Actor():
 
     def jump_boost(self):
         if(self._last_command != "jump_boost"):
-            self.reset("right")
+            self.reset()
             self.reset_buts([self._jump])
             self._vjoy.set_button(self._jump, 1)
             self.boost()
@@ -251,12 +251,12 @@ class Actor():
             self._last_command = "item_right_boost"
 
     def slide(self):
-        #if(self._last_command != "slide"):
-        self.reset()
-        self.reset_buts([self._slide])
-        self._vjoy.set_button(self._slide, 1)
-        self.reset_boost()
-        time.sleep(0.00000001)
+        if(self._last_command != "slide"):
+            self.reset()
+            self.reset_buts([self._slide])
+            self._vjoy.set_button(self._slide, 1)
+            self.reset_boost()
+            time.sleep(0.00000001)
 
         self._last_command = "slide"
 
