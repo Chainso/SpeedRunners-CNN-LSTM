@@ -130,7 +130,7 @@ class CNNLSTM():
         self.optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(self.loss)
         
         # A correct prediction is to have the same maximum element
-        self.correct_pred = tf.equal(tf.argmax(self.prediction, 1), tf.argmax(self.labels, 1))
+        self.correct_pred = tf.equal(tf.argmax(self.prediction, 2), tf.argmax(self.labels, 2))
 
         # Get the accuracy over the batch
         self.accuracy = tf.reduce_mean(tf.cast(self.correct_pred, tf.float32))
