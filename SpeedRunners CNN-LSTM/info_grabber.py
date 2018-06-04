@@ -52,7 +52,7 @@ class InfoGrabber():
 
         return img
 
-    def screenshot(self, width, height):
+    def screenshot(self, res_width, res_height):
         # Set the current window to your window
         win32gui.SetForegroundWindow(self._hwnd)
 
