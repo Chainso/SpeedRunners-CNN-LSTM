@@ -38,7 +38,13 @@ To record your own gameplay, run record_gameplay.py while you are loaded into th
 
 # Training the Model
 
-There is a pre-trained model for nightclub already uploaded, as well as the training data used to train it. The training data used was a very low amount. You can overwrite these or change the model and training data path to create your own. Once you have your training data
+There is a pre-trained model for nightclub already uploaded, as well as the training data used to train it. The training data used was a very low amount. You can overwrite these or change the model and training data path to create your own. Once you have your training data. Change the batch size to a number that is evenly divisible by the number of pictures in your training data. Change the number of epochs to the number that you want and run train_model.py.
+
+&nbsp;
+
+# Running the model
+
+Once your model is trained, make sure that the model path in play_game.py goes to your trained model. Open the game and load the map you trained on. Run play_game.py, the window will change to your game when the model starts playing.
 
 &nbsp;
 
