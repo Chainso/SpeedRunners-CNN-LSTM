@@ -3,6 +3,7 @@
 CNN-LSTM Network that learns to play SpeedRunners
 
 
+
 # Setup
 
 There is a pre-trained model for nightclub already uploaded, as well as the training data used to train it. The training data used was a very low amount. You can overwrite these or change the model and training data path to create your own.
