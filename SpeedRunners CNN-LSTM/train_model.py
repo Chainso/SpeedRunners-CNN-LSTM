@@ -14,6 +14,9 @@ IMAGE_WIDTH = 128
 # The height of the image
 IMAGE_HEIGHT = 128
 
+# The depth of the iamge
+IMAGE_DEPTH = 1
+
 # The number of epochs
 EPOCHS = 7
 
@@ -42,7 +45,8 @@ MODEL_PATH = CURRENT_DIR + "/SpeedRunners Models/model.ckpt"
 #-----Train Model-----#
 
 # CNN-LSTM Model
-model = CNNLSTM(IMAGE_WIDTH, IMAGE_HEIGHT, 1, BATCH_SIZE, MEMORY_FRAMES, LR)
+model = CNNLSTM(IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_DEPTH, BATCH_SIZE,
+                MEMORY_FRAMES, LR)
 
 # Get the data
 data = np.load(DATA_PATH)
